@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*se pinta el body con un degradado y se usa flex-box para poner los items en el centro y en columna*/
+    background: linear-gradient(to right, rgb(255, 115, 0), rgb(251, 255, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado{
+/*se da un color de fondo, un ancho y alto, se usa flex-box para centrar el elemento "#resp" y se le da un borde*/
+    background-color: black;
+    width: 394px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+}
+/*este es el input al que se le asigna un ancho y alto un tamaño de fuente y un color de fondo, de letra y un borde */
+#resp{
+    width: 370px;
+    height: 50px;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+/*apartir de aqui se usa css-grid para hacer 4 colubnas y 5 filas en las que van los numeros y operadores aritmeticos tambien se le da un ancho y un alto al contedor de estos*/
+.numeros{
+    width: 400px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,2fr);
+}
+
+/*se pinta el boton, se le da color a lo que contien el boton, se la da un borde se posiciona el elemento con grid y se utiliza flex-box para centrar el contenedo del boton adeamas se le da un tamaño a la fuente y se le asigna la propiedad de hover al elemento para cuanto se le pase el cursos por encima este cambie de color y de puntero 
+a exebcion de la pocicion y de colores todo esto es igual en los estilos aplicados de qui en adelante*/
+.num0{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 3px solid white;
+    grid-column: 1/3;
+    grid-row: 5/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.num0:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.num1{
+    grid-row: 4/4;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.num1:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.num2{
+    grid-column: 2/2;
+    grid-row: 4/4;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.num2:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.num3{
+    grid-column: 3/3;
+    grid-row: 4/4;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.num3:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.num4{
+    grid-column: 1/1;
+    grid-row: 3/3;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.num4:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.num5{
+    grid-column: 2/2;
+    grid-row: 3/3;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.num5:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.num6{
+    grid-column: 3/3;
+    grid-row: 3/3;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.num6:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.num7{
+    grid-column: 1/1;
+    grid-row: 2/2;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.num7:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.num8{
+    grid-column: 2/2;
+    grid-row: 2/2;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.num8:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.num9{
+    grid-column: 3/3;
+    grid-row: 2/2;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.num9:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.suma{
+    grid-column: 4/4;
+    grid-row: 4/4;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.suma:hover{
+    cursor: pointer;
+    background-color: rgba(255, 51, 0, 0.685);
+}
+.resta{
+    grid-column: 4/4;
+    grid-row: 3/3;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.resta:hover{
+    cursor: pointer;
+    background-color: rgba(255, 51, 0, 0.685);
+}
+.multiplicacion{
+    grid-column: 4/4;
+    grid-row: 2/2;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.multiplicacion:hover{
+    cursor: pointer;
+    background-color: rgba(255, 51, 0, 0.685);
+}
+.divicion{
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.divicion:hover{
+    cursor: pointer;
+    background-color: rgba(255, 51, 0, 0.685);
+}
+.igual{
+    grid-column: 4/4;
+    grid-row: 5/5;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.igual:hover{
+    cursor: pointer;
+    background-color: rgba(255, 51, 0, 0.685);
+}
+.punto{
+    grid-column: 3/3;
+    grid-row: 5/5;
+    font-size:50px;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.punto:hover{
+    cursor: pointer;
+    background-color: rgba(255, 51, 0, 0.685);
+}
+.eliminar{
+    background-color: black;
+    color: white;
+    font-size:40px;
+    border: 3px solid white;
+}
+.eliminar:hover{
+    cursor: pointer;
+    background-color: rgb(190, 0, 0);
+}
+.limpiar{
+    grid-column:1/3;
+    grid-row: 1/1;
+    background-color: red;
+    font-size:40px;
+    border: 3px solid white;
+}
+.limpiar:hover{
+    cursor: pointer;
+    background-color: rgb(190, 0, 0);
+}
